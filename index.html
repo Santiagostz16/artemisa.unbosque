@@ -18005,8 +18005,14 @@ be a descendant of the grid when it is being dragged.
 
 
 /* ── Ajustes visuales de notas ── */
+#tabla-notas-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+}
 #tabla-notas-container table.notas-tabla {
     width: 100%;
+    min-width: 980px;
     max-width: 100%;
     border-collapse: collapse;
     font-size: 12px;
@@ -43199,9 +43205,13 @@ var NOTAS = {
 function fn(v){ return (v===null||v===undefined)?'\u00a0':parseFloat(v).toFixed(1); }
 function fp(v){ return (v===null||v===undefined)?'\u00a0':v+'%'; }
 
+function getNotasForPeriodo(pid) {
+    return NOTAS[pid] || NOTAS['20261'];
+}
+
 function buildNotasTable(pid) {
-    var rows = NOTAS[pid];
-    if (!rows) return '<p style="margin:8px 0;">No hay calificaciones registradas para este periodo.</p>';
+    var rows = getNotasForPeriodo(pid);
+    if (!rows || !rows.length) return '<p style="margin:8px 0;">No hay calificaciones registradas para este periodo.</p>';
     var h = '<table class="notas-tabla" cellpadding="1" cellspacing="0">';
     h += '<thead><tr id="trtitulogris">';
     ['Código','Nombre Asignatura','Cr','C1','%','C2','%','C3','%','PPA','NPA','F%','R','FT','FP']
@@ -43382,17 +43392,24 @@ function initNotas(){
     var f   = fechaHoy();
     var hms = f.hh+':'+f.mm+':'+f.ss;
     var ymd = f.anio+'-'+String(f.mes).padStart(2,'0')+'-'+String(f.dia).padStart(2,'0');
-    $('#notas-fecha-est').text(ymd+' '+hms);
-    $('#notas-fecha-tab').text(f.dia+'/'+String(f.mes).padStart(2,'0')+'/'+f.anio);
+    var $page = $('#page-content');
+    var $select = $page.find('#selectPeriodo').first();
+    var $btn = $page.find('#btnActualizar').first();
+    var $table = $page.find('#tabla-notas-container').first();
+
+    $page.find('#notas-fecha-est').text(ymd+' '+hms);
+    $page.find('#notas-fecha-tab').text(f.dia+'/'+String(f.mes).padStart(2,'0')+'/'+f.anio);
+
     // Do NOT auto-show table — user must select period and click Actualizar
-    $(document).off('click.actualizar','#btnActualizar').on('click.actualizar','#btnActualizar',function(){
-        var pid = $('#selectPeriodo').val();
+    $(document).off('click.actualizar', '#page-content #btnActualizar')
+               .on('click.actualizar', '#page-content #btnActualizar', function(e){
+        e.preventDefault();
+        var pid = $select.val();
         if(!pid){ alert('Seleccione un periodo'); return; }
-        // Small loading effect
-        $('#tabla-notas-container').html('<p style="padding:8px;"><i class="fa fa-spinner fa-pulse fa-fw"></i> Cargando calificaciones...</p>');
+        $table.html('<p style="padding:8px;"><i class="fa fa-spinner fa-pulse fa-fw"></i> Cargando calificaciones...</p>');
         setTimeout(function(){
-            $('#tabla-notas-container').html(buildNotasTable(pid));
-        }, 800);
+            $table.html(buildNotasTable(pid));
+        }, 600);
     });
 }
 
