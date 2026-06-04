@@ -1,0 +1,774 @@
+<html lang="es"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="https://artemisa.unbosque.edu.co/sala/assets/images/favicon.ico" type="image/x-icon">
+    <title>
+        Sistema de gestión académica en línea - SALA     </title>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-JSXJVJR9J1&amp;cx=c&amp;_slc=1"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+    var HTTP_SITE = "https://artemisa.unbosque.edu.co/sala";
+    var HTTP_ROOT = "https://artemisa.unbosque.edu.co";
+    var alowNavigate = true; //esta variable permite o no navegar las opciones del menu dependiendo de las condiciones para estudiantes u otros usuarios
+    </script>
+<!--  Space loading indicator  -->
+    <script src="https://artemisa.unbosque.edu.co/sala/assets/js/spiceLoading/pace.min.js"></script>
+    <!--JQuery [ REQUIRED ]-->
+
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/jquery-3.1.1.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/jquery-migrate-1.2.1.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/jquery-ui.min.js?v=1779829266"></script>
+<!--Ajax Dinamic List Search Menu [ REQUIRED ]-->
+
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/ajax.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/assets/js/chosen.jquery.min.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/assets/js/triggerChosen.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/assets/js/moment.min.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/assets/js/moment-with-locales.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/assets/js/bootstrap-datetimepicker.js?v=1779829266"></script>
+<!--Bootbox Modals [ OPTIONAL ]-->
+
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/plugins/bootbox/bootbox.min.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/validaVidaSesion.js?v=1779829266"></script>    
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/assets/css/normalize.css?v=1779829266"> 
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/assets/css/font-page.css?v=1779829266"> 
+<!--Bootstrap Stylesheet [ REQUIRED ]-->
+
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/sala/assets/css/bootstrap.css?v=1779829266">  
+
+<!--Btheme Stylesheet [ REQUIRED ]-->
+
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/sala/assets/css/btheme.css?v=1779829266">     
+<!--Font Awesome [ OPTIONAL ]-->
+
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/assets/css/font-awesome.css?v=1779829266">     
+<!--Theme styles-->
+
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/sala/assets/css/template.css?v=1779829266"> 
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/assets/css/chosen.css?v=1779829266"> 
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/assets/css/bootstrap-datetimepicker.css?v=1779829266"> 
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/assets/css/bootstrap-datetimepicker.min.css?v=1779829266"> 
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/sala/assets/css/loader.css?v=1779829266">         <script type="text/javascript">
+    var ANALYTICS = "UA-128035539-4";
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-128035539-4"></script>
+    <script async="">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', ANALYTICS);
+    </script>
+    <!-- Google Analytics -->
+    <script async="">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', ANALYTICS, 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/trackAnalytics.js?v=1779829266"></script>
+    <script>
+        Pace.options.elements.selectors=['#content-container'];
+        Pace.restart();
+    </script>
+
+<!--  loading cornerIndicator  -->
+    <link href="https://artemisa.unbosque.edu.co/sala/assets/css/cornerIndicator/cornerIndicator.css" rel="stylesheet">
+
+<style type="text/css">
+    #navbar.produccionHeader,
+    #navbar.produccionHeader #navbar-container.boxed,
+    #navbar.produccionHeader #navbar-container.boxed .navbar-content,
+    #navbar.produccionHeader #navbar-container.boxed .navbar-header,
+    #navbar.produccionHeader #navbar-container.boxed .navbar-header a
+    {
+        background-color: #7CC240  !important;
+    }
+</style></head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+
+<body class="btheme-ready pace-done pace-done"><div class="pace  pace-inactive pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <div id="container" class="effect mainnav-lg aside-in aside-left aside-bright">
+        <!--NAVBAR-->
+        <!--===================================================-->
+        <header id="navbar" class="produccionHeader shadow">
+            <div id="navbar-container" class="boxed">
+                <!--Brand logo & name-->
+                <!--================================-->
+                <div class="navbar-header">
+                    <a href="https://artemisa.unbosque.edu.co/sala/" class="navbar-brand">
+                                                <div class="brand-title">
+                            <span class="brand-text">
+                                                                    <img src="https://artemisa.unbosque.edu.co/sala/assets/images/logoSALA/Logo-UEB-Sala.svg" width="100%" alt="btheme Logo" class="brand-icon">
+                                                                </span>
+                        </div>
+                    </a>
+                </div>
+                <!--================================-->
+                <!--End brand logo & name-->
+                
+                <!--Navbar Dropdown-->
+                <!--================================-->
+                <div class="navbar-content clearfix">
+                    <ul class="nav navbar-top-links pull-left">
+                        <!--Navigation toogle button-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li class="tgl-menu-btn">
+                            <a class="mainnav-toggle" href="#">
+                                <i class="fa fa-navicon fa-lg"></i>
+                            </a>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End Navigation toogle button-->
+                                            </ul>
+                    
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/components/userMenu/assets/js/userMenu.js?v=1779829266"></script><script type="text/javascript">
+    var disablePulsar = false;
+</script>
+<ul class="nav navbar-top-links pull-right">
+    
+    <li class="hidden-sm hidden-md hidden-lg visible-xs">
+        <a href="https://artemisa.unbosque.edu.co/sala/index.php" id="menuId_0" class="menuItem" rel="">
+             <i class="fa fa-home"></i> Inicio
+        </a>
+    </li>
+    <!--Periodo Seleccionado -->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <li class="dropdown">
+        <a class="periodoactivo hidden-xs">
+            Periodo: <i class="fa fa-calendar-check-o"></i> <strong>20261</strong>
+        </a>
+    </li>
+    
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--End periodo seleccionado-->
+    
+    <!--Perfil selector-->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <li class="dropdown"><a id="demo-lang-switch" class="lang-selector dropdown-toggle" href="#" data-rol-id="1" data-toggle="dropdown"><span class="hidden-xs">Perfil: </span><span class="lang-selected">
+                <i class="fa fa-child lang-flag" aria-hidden="true"></i>
+                <span class="lang-name">Estudiante</span>
+                </span></a></li> 
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--End perfil selector-->
+    <!--User dropdown-->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <li id="dropdown-user" class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right" aria-expanded="false">
+            <span class="pull-right">
+                                <img class="img-circle img-user img-rectangulo media-object" src="https://artemisa.unbosque.edu.co/imagenes/estudiantes/1034779503.jpg" alt="Profile Picture" style="">
+            </span>
+            <div class="username hidden-xs">Santiago Correa Salgado</div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+            <div class="pad-all bord-btm"><p class="text-lg text-muted text-thin mar-btm" id="userMenuNombreCarrera" data-idcarrera="123">INGENIERIA DE SISTEMAS</p></div>             
+            <!-- User dropdown menu -->
+            <ul class="head-list">
+                
+                <li>
+                    <a href="https://artemisa.unbosque.edu.co/sala/index.php?option=estudiantes" id="menuId_164" class="menuItem" rel="">
+                        <i class="fa fa-user-circle fa-fw fa-lg"></i> Mi cuenta (Estudiantes)
+                    </a>
+                </li>
+                <li>
+                    <a href="https://artemisa.unbosque.edu.co/sala/index.php?option=carneDigital&amp;layout=carneDigital" id="menuId_0" class="menuItem" rel="">
+                        <i class="fa fa-id-badge fa-fw fa-lg"></i> Carné Digital
+                </a>
+                </li>
+                <li>
+                    <a href="https://artemisa.unbosque.edu.co/sala/index.php?option=dashBoard&amp;layout=carrerasEstudiante" id="menuId_0" class="menuItem" rel="">
+                        <i class="fa fa-university fa-fw fa-lg"></i> Seleccionar carrera
+                    </a>
+                </li>
+                <li>
+                    <a href="https://artemisa.unbosque.edu.co/serviciosacademicos/consulta/consultanotassala.php" id="menuId_166" class="menuItem" rel="iframe">
+                        <i class="fa fa-trophy fa-fw fa-lg"></i> Consulta de notas
+                    </a>
+                </li>
+                <li>
+                    <a href="https://artemisa.unbosque.edu.co/serviciosacademicos/consulta/facultades/planestudioestudiante/planestudioestudiante.php?codigoestudiante=420880" id="menuId_636" class="menuItem" rel="iframe">
+                        <i class="fa fa-road fa-fw fa-lg"></i> Ver plan de estudio
+                    </a>
+                </li>
+                <li>
+                    <a href="https://artemisa.unbosque.edu.co/serviciosacademicos/mgi/tablero_siq/Creacion_Docuemto/Hoja_Vida.html.php?actionID=Dirrecto" id="menuId_271" class="menuItem" rel="iframe">
+                        <i class="fa fa-id-card fa-fw fa-lg"></i> Hoja de vida
+                    </a>
+                </li>
+                <li>
+                    <a href="https://artemisa.unbosque.edu.co/serviciosacademicos/consulta/ordenpagovarias/ordenpagovarias.php" id="menuId_170" class="menuItem" rel="iframe">
+                        <i class="fa fa-money fa-fw fa-lg"></i> Pagos
+                    </a>
+                </li>            </ul>
+
+            <!-- Dropdown footer -->
+            <div class="pad-all text-right">
+                <a href="#" class="btn btn-warning logout">
+                    <i class="fa fa-sign-out fa-fw"></i> Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </li>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--End user dropdown-->
+    <li class="">
+        <a class="btn btn-link btn-icon icon-lg fa fa-sign-out logout add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Cerrar sesión"></a>
+    </li>
+</ul>                </div>
+                
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+        
+        <div class="boxed">
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                <div class="loaderContent">
+                    <div class="contenedorInterior">
+                        <i class="fa fa-spinner fa-pulse fa-5x"></i>
+                        <span class="sr-only">Cargando...</span>
+                        <div id="mensajeLoader"></div>
+                    </div>
+                </div>
+                <div id="page-alert"></div>
+                <!--Page Title-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">Sistema de gestión académica en línea - SALA</h1>
+                </div>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End page title-->
+                
+                <!--Breadcrumb-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <div id="page-breadCrumb">
+                    <ol class="breadcrumb"><li><a href="https://artemisa.unbosque.edu.co/sala/index.php" id="menuId_0" class="menuItem  active " rel="">Inicio</a></li></ol>                </div>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End breadcrumb-->
+                
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
+                    
+<div class="row">
+    <div class="col-lg-8"> 
+        <!--Banner para la Autoevalucion de asignaturas por parte de los docentes -->
+                            <div class="panel">
+                <!--<div class="panel-media">
+                    <img src="../../../assets/img/av1.png" class="panel-media-img img-circle img-border-light" alt="Profile Picture">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <h3 class="panel-media-heading">Stephen Tran</h3>
+                            <a href="#" class="btn-link">@stephen_doe</a>
+                            <p class="text-muted mar-btm">Web and Graphic designer</p>
+                        </div>
+                        <div class="col-lg-5 text-lg-right">
+                            <button class="btn btn-sm btn-primary">Add Friend</button>
+                            <button class="btn btn-sm btn-mint btn-icon fa fa-envelope icon-lg"></button>
+                        </div>
+                    </div>
+                </div>-->
+            <div class="panel-heading">
+    <h3 class="panel-title">Horario para el martes 2 de junio </h3>
+</div>
+<div class="panel-body">
+    <div class="table-responsive" id="tablaHorariosEstudiante">
+        <table class="table table-hover table-condensed table-vcenter">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Materia</th>
+                    <th class="hidden-xs">Docente</th>
+                                        <th class="hidden-xs">Sede/Campus</th>
+                    <th class="hidden-xs">Bloque</th>
+                    <th>Salón</th>
+                </tr>
+            </thead>
+            <tbody>
+                                        <tr>
+                            <td>
+                                <span class="text-semibold">
+                                    09:00:00                                </span>
+                            </td>
+                            <td>
+                                SISTEMAS OPERACIONALES                            </td>
+                            <td class="hidden-xs">
+                                SAMUEL GALINDO PINZON                            </td>
+                                                        <td class="hidden-xs">
+                                Usaquen                            </td>
+                            <td class="hidden-xs">
+                                B                            </td>
+                            <td>
+                                B-210                            </td>
+                        </tr>
+                                                <tr>
+                            <td>
+                                <span class="text-semibold">
+                                    14:00:00                                </span>
+                            </td>
+                            <td>
+                                SISTEMAS INTELIGENTES                            </td>
+                            <td class="hidden-xs">
+                                FRAN ERNESTO ROMERO ALVAREZ                            </td>
+                                                        <td class="hidden-xs">
+                                Usaquen                            </td>
+                            <td class="hidden-xs">
+                                F                            </td>
+                            <td>
+                                F-201                            </td>
+                        </tr>
+                                    </tbody>
+        </table>
+    </div>
+</div>
+<style type="text/css">
+#tablaHorariosEstudiante > .table > thead > tr > th, 
+#tablaHorariosEstudiante > .table > tbody > tr > th, 
+#tablaHorariosEstudiante > .table > tfoot > tr > th, 
+#tablaHorariosEstudiante > .table > thead > tr > td, 
+#tablaHorariosEstudiante > .table > tbody > tr > td, 
+#tablaHorariosEstudiante > .table > tfoot > tr > td {
+    white-space: pre-line !important;
+}
+</style>            </div> 
+                        
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/plugins/flot-charts/jquery.flot.min.js?v=1779829266"></script>    
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/plugins/flot-charts/jquery.flot.resize.min.js?v=1779829266"></script>
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">Historico de notas</h3>
+        </div>
+        <div class="panel-body">
+            <!--Flot Line Chart placeholder-->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div id="historicoDeNotas" style="height: 212px; padding: 0px; position: relative;"><canvas class="flot-base" width="646" height="212" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 646.656px; height: 212px;"></canvas><div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 109px; top: 198px; left: 16px; text-align: center;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 109px; top: 198px; left: 140px; text-align: center;">1</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 109px; top: 198px; left: 263px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 109px; top: 198px; left: 387px; text-align: center;">3</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 109px; top: 198px; left: 510px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 109px; top: 198px; left: 634px; text-align: center;">5</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 185px; left: 0px; text-align: right;">0.0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 139px; left: 0px; text-align: right;">1.0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 94px; left: 0px; text-align: right;">2.0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 48px; left: 0px; text-align: right;">3.0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 3px; left: 0px; text-align: right;">4.0</div></div></div><canvas class="flot-overlay" width="646" height="212" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 646.656px; height: 212px;"></canvas><div class="legend"><div style="position: absolute; width: 79.0312px; height: 14.2812px; top: 10px; left: 34px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:10px;left:34px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(135,189,75);overflow:hidden"></div></div></td><td class="legendLabel">Nota semestre</td></tr></tbody></table></div></div>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        </div>
+    </div>
+    <script type="text/javascript">
+        var periodos = [ 20241 , 20242 , 20251 , 20252 ];
+        var notas = [[0, ],[1, 3.5],[2, 3],[3, 3.1],[4, 3.3],[5, ]];
+        var ticksXaxis = 4;
+    </script>
+    
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/components/moduloGraficaNotas/assets/js/historicoDeNotas.js?v=1779829266"></script>            
+        <!-- Calendar placeholder-->
+        <!-- ============================================ -->
+        
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/sala/assets/plugins/fullcalendar/fullcalendar.css?v=1779829266"> 
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/sala/assets/css/jquery.qtip.min.css?v=1779829266"> 
+                        <link type="text/css" rel="stylesheet" href="https://artemisa.unbosque.edu.co/sala/components/moduloCalendarioInstitucional/assets/css/moduloCalendarioInstitucional.css?v=1779829266"> <script type="text/javascript">
+    var events= [];
+</script>
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">Calendario institucional</h3>
+    </div>
+    <div class="panel-body">
+        <div id="calendar" class="fc fc-ltr fc-unthemed"><div class="fc-toolbar"><div class="fc-left"><h2>junio 2026</h2></div><div class="fc-right"><div class="fc-button-group"><button type="button" class="fc-prev-button fc-button fc-state-default fc-corner-left"><span class="fc-icon fc-icon-left-single-arrow"></span></button><button type="button" class="fc-next-button fc-button fc-state-default fc-corner-right"><span class="fc-icon fc-icon-right-single-arrow"></span></button></div><button type="button" class="fc-today-button fc-button fc-state-default fc-corner-left fc-corner-right fc-state-disabled" disabled="disabled">Hoy</button></div><div class="fc-center"></div><div class="fc-clear"></div></div><div class="fc-view-container" style=""><div class="fc-view fc-month-view fc-basic-view" style=""><table><thead><tr><td class="fc-widget-header"><div class="fc-row fc-widget-header"><table><thead><tr><th class="fc-day-header fc-widget-header fc-mon">lun.</th><th class="fc-day-header fc-widget-header fc-tue">mar.</th><th class="fc-day-header fc-widget-header fc-wed">mié.</th><th class="fc-day-header fc-widget-header fc-thu">jue.</th><th class="fc-day-header fc-widget-header fc-fri">vie.</th><th class="fc-day-header fc-widget-header fc-sat">sáb.</th><th class="fc-day-header fc-widget-header fc-sun">dom.</th></tr></thead></table></div></td></tr></thead><tbody><tr><td class="fc-widget-content"><div class="fc-day-grid-container" style=""><div class="fc-day-grid"><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 74px;"><div class="fc-bg"><table><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-past" data-date="2026-06-01"></td><td class="fc-day fc-widget-content fc-tue fc-today fc-state-highlight" data-date="2026-06-02"></td><td class="fc-day fc-widget-content fc-wed fc-future" data-date="2026-06-03"></td><td class="fc-day fc-widget-content fc-thu fc-future" data-date="2026-06-04"></td><td class="fc-day fc-widget-content fc-fri fc-future" data-date="2026-06-05"></td><td class="fc-day fc-widget-content fc-sat fc-future" data-date="2026-06-06"></td><td class="fc-day fc-widget-content fc-sun fc-future" data-date="2026-06-07"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-number fc-mon fc-past" data-date="2026-06-01">1</td><td class="fc-day-number fc-tue fc-today fc-state-highlight" data-date="2026-06-02">2</td><td class="fc-day-number fc-wed fc-future" data-date="2026-06-03">3</td><td class="fc-day-number fc-thu fc-future" data-date="2026-06-04">4</td><td class="fc-day-number fc-fri fc-future" data-date="2026-06-05">5</td><td class="fc-day-number fc-sat fc-future" data-date="2026-06-06">6</td><td class="fc-day-number fc-sun fc-future" data-date="2026-06-07">7</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 74px;"><div class="fc-bg"><table><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-future" data-date="2026-06-08"></td><td class="fc-day fc-widget-content fc-tue fc-future" data-date="2026-06-09"></td><td class="fc-day fc-widget-content fc-wed fc-future" data-date="2026-06-10"></td><td class="fc-day fc-widget-content fc-thu fc-future" data-date="2026-06-11"></td><td class="fc-day fc-widget-content fc-fri fc-future" data-date="2026-06-12"></td><td class="fc-day fc-widget-content fc-sat fc-future" data-date="2026-06-13"></td><td class="fc-day fc-widget-content fc-sun fc-future" data-date="2026-06-14"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-number fc-mon fc-future" data-date="2026-06-08">8</td><td class="fc-day-number fc-tue fc-future" data-date="2026-06-09">9</td><td class="fc-day-number fc-wed fc-future" data-date="2026-06-10">10</td><td class="fc-day-number fc-thu fc-future" data-date="2026-06-11">11</td><td class="fc-day-number fc-fri fc-future" data-date="2026-06-12">12</td><td class="fc-day-number fc-sat fc-future" data-date="2026-06-13">13</td><td class="fc-day-number fc-sun fc-future" data-date="2026-06-14">14</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 74px;"><div class="fc-bg"><table><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-future" data-date="2026-06-15"></td><td class="fc-day fc-widget-content fc-tue fc-future" data-date="2026-06-16"></td><td class="fc-day fc-widget-content fc-wed fc-future" data-date="2026-06-17"></td><td class="fc-day fc-widget-content fc-thu fc-future" data-date="2026-06-18"></td><td class="fc-day fc-widget-content fc-fri fc-future" data-date="2026-06-19"></td><td class="fc-day fc-widget-content fc-sat fc-future" data-date="2026-06-20"></td><td class="fc-day fc-widget-content fc-sun fc-future" data-date="2026-06-21"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-number fc-mon fc-future" data-date="2026-06-15">15</td><td class="fc-day-number fc-tue fc-future" data-date="2026-06-16">16</td><td class="fc-day-number fc-wed fc-future" data-date="2026-06-17">17</td><td class="fc-day-number fc-thu fc-future" data-date="2026-06-18">18</td><td class="fc-day-number fc-fri fc-future" data-date="2026-06-19">19</td><td class="fc-day-number fc-sat fc-future" data-date="2026-06-20">20</td><td class="fc-day-number fc-sun fc-future" data-date="2026-06-21">21</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 74px;"><div class="fc-bg"><table><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-future" data-date="2026-06-22"></td><td class="fc-day fc-widget-content fc-tue fc-future" data-date="2026-06-23"></td><td class="fc-day fc-widget-content fc-wed fc-future" data-date="2026-06-24"></td><td class="fc-day fc-widget-content fc-thu fc-future" data-date="2026-06-25"></td><td class="fc-day fc-widget-content fc-fri fc-future" data-date="2026-06-26"></td><td class="fc-day fc-widget-content fc-sat fc-future" data-date="2026-06-27"></td><td class="fc-day fc-widget-content fc-sun fc-future" data-date="2026-06-28"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-number fc-mon fc-future" data-date="2026-06-22">22</td><td class="fc-day-number fc-tue fc-future" data-date="2026-06-23">23</td><td class="fc-day-number fc-wed fc-future" data-date="2026-06-24">24</td><td class="fc-day-number fc-thu fc-future" data-date="2026-06-25">25</td><td class="fc-day-number fc-fri fc-future" data-date="2026-06-26">26</td><td class="fc-day-number fc-sat fc-future" data-date="2026-06-27">27</td><td class="fc-day-number fc-sun fc-future" data-date="2026-06-28">28</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 74px;"><div class="fc-bg"><table><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-future" data-date="2026-06-29"></td><td class="fc-day fc-widget-content fc-tue fc-future" data-date="2026-06-30"></td><td class="fc-day fc-widget-content fc-wed fc-other-month fc-future" data-date="2026-07-01"></td><td class="fc-day fc-widget-content fc-thu fc-other-month fc-future" data-date="2026-07-02"></td><td class="fc-day fc-widget-content fc-fri fc-other-month fc-future" data-date="2026-07-03"></td><td class="fc-day fc-widget-content fc-sat fc-other-month fc-future" data-date="2026-07-04"></td><td class="fc-day fc-widget-content fc-sun fc-other-month fc-future" data-date="2026-07-05"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-number fc-mon fc-future" data-date="2026-06-29">29</td><td class="fc-day-number fc-tue fc-future" data-date="2026-06-30">30</td><td class="fc-day-number fc-wed fc-other-month fc-future" data-date="2026-07-01">1</td><td class="fc-day-number fc-thu fc-other-month fc-future" data-date="2026-07-02">2</td><td class="fc-day-number fc-fri fc-other-month fc-future" data-date="2026-07-03">3</td><td class="fc-day-number fc-sat fc-other-month fc-future" data-date="2026-07-04">4</td><td class="fc-day-number fc-sun fc-other-month fc-future" data-date="2026-07-05">5</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 76px;"><div class="fc-bg"><table><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-other-month fc-future" data-date="2026-07-06"></td><td class="fc-day fc-widget-content fc-tue fc-other-month fc-future" data-date="2026-07-07"></td><td class="fc-day fc-widget-content fc-wed fc-other-month fc-future" data-date="2026-07-08"></td><td class="fc-day fc-widget-content fc-thu fc-other-month fc-future" data-date="2026-07-09"></td><td class="fc-day fc-widget-content fc-fri fc-other-month fc-future" data-date="2026-07-10"></td><td class="fc-day fc-widget-content fc-sat fc-other-month fc-future" data-date="2026-07-11"></td><td class="fc-day fc-widget-content fc-sun fc-other-month fc-future" data-date="2026-07-12"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-number fc-mon fc-other-month fc-future" data-date="2026-07-06">6</td><td class="fc-day-number fc-tue fc-other-month fc-future" data-date="2026-07-07">7</td><td class="fc-day-number fc-wed fc-other-month fc-future" data-date="2026-07-08">8</td><td class="fc-day-number fc-thu fc-other-month fc-future" data-date="2026-07-09">9</td><td class="fc-day-number fc-fri fc-other-month fc-future" data-date="2026-07-10">10</td><td class="fc-day-number fc-sat fc-other-month fc-future" data-date="2026-07-11">11</td><td class="fc-day-number fc-sun fc-other-month fc-future" data-date="2026-07-12">12</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div></div></div></td></tr></tbody></table></div></div></div>
+    </div>
+</div>
+
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/jquery.qtip.min.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/plugins/fullcalendar/lib/moment.min.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/plugins/fullcalendar/lib/jquery-ui.custom.min.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/plugins/fullcalendar/fullcalendar.min.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/plugins/fullcalendar/lang/es.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/components/moduloCalendarioInstitucional/assets/js/moduloCalendarioInstitucional.js?v=1779829266"></script>        <!-- ============================================ --> 
+</div>
+    <div class="col-lg-4">
+        <div class="panel" style="display: none;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Eventos</h3>
+            </div>
+            <div class="panel-body" id="EventoDinamico">
+                <i class="fa fa-spinner fa-pulse fa-3x"></i> Cargando...
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">Conéctate con la UEB</h3>
+            </div>
+            <div class="panel-body bs-dashDoard-btn">
+                <a title="" href="https://www.facebook.com/universidadelbosque" target="_blank" class="btn btn-labeled btn-primary btn-hover-primary fa fa-facebook icon-lg add-tooltip" data-original-title="Facebook" data-container="body">
+                    <span class="hidden-xs">Facebook</span>
+                </a>
+                <a title="" href="https://www.linkedin.com/edu/universidad-el-bosque-11599" target="_blank" class="btn btn-labeled btn-info btn-hover-info fa fa-linkedin icon-lg add-tooltip" data-original-title="Linkedin" data-container="body">
+                    <span class="hidden-xs">Linkedin</span>
+                </a>
+                <a title="" href="https://www.instagram.com/uelbosque" target="_blank" class="btn btn-labeled btn-warning btn-hover-warning fa fa-instagram icon-lg add-tooltip" data-original-title="Instagram" data-container="body">
+                    <span class="hidden-xs">Instagram</span>
+                </a>
+                <a title="" href="https://twitter.com/UElBosque" target="_blank" class="btn btn-labeled btn-info btn-hover-info fa fa-twitter icon-lg add-tooltip" data-original-title="Twitter" data-container="body">
+                    <span class="hidden-xs">Twitter</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--===================================================-->
+    <!--===================================================-->
+ 
+
+
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/components/dashBoard/assets/js/dashBoard.js?v=1779829266"></script>                </div>
+                <!--===================================================-->
+                <!--End page content-->
+            
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+            
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+                    <!--Shortcut buttons-->
+                    <!--  -->
+                    <div id="mainnav-shortcut">
+                        <ul class="list-unstyled">
+                            <li class="col-xs-4" data-content="Preguntas Frecuentes" data-original-title="" title="">
+                                <a id="demo-toggle-aside" rel="iframe" class="menuItem shortcut-grid" href="https://artemisa.unbosque.edu.co/serviciosacademicos/consulta/facultades/centralPreguntasFrecuentes.htm">
+                                    <i class="fa fa-question-circle"></i>
+                                </a>
+                            </li>
+                            <li class="col-xs-4" data-content="Correo Institucional" data-original-title="" title="">
+                                <a id="demo-alert" rel="" class="shortcut-grid" href="https://mail.google.com/a/unbosque.edu.co" target="_blank">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--End shortcut buttons-->
+                    
+                    <!--Menu-->
+                    <!--================================-->
+<div id="mainnav-menu-wrap">
+    <div class="search">
+        <div class="nano-content" tabindex="0" style="right: -17px;">
+            <ul id="search-menu" class="list-group">
+                <!--Category name-->
+                <li class="list-header">
+                    <div class="input-group  bg-white">
+                        <span class="input-group-addon"><i class="fa fa-search fa-lg"></i></span>
+                        <input class="form-control" id="txt_buscador" placeholder="Búsqueda" type="text" autocomplete="off">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="nano has-scrollbar">
+        <div class="nano-content" tabindex="0" style="right: -15px;">
+            <ul id="mainnav-menu" class="list-group">
+                <!--Menu list item--> 
+                <li class="">
+                    <a href="https://artemisa.unbosque.edu.co/sala/index.php" id="menuId_0" rel="" class="menuItem">
+                        <i class="fa fa-home"></i>
+                        <span class="menu-title">
+                            <strong>INICIO</strong> 
+                        </span>
+                    </a>
+                </li> 
+
+                
+				<li>
+					<a href="https://artemisa.unbosque.edu.co/serviciosacademicos/mgi/tablero_siq/Creacion_Documento/VisualizarGeneral.html.php" id="menuId_541" class="menuItem" rel="iframe">
+						<i class="fa fa-archive"></i>
+						<span class="menu-title">
+							<strong>AUTOEVALUACIÓN INSTITUCIONAL</strong>
+						</span>
+			
+					</a>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+				<li class="active-link active">
+					<a href="#" id="menuId_164" class="menuItem" rel="">
+						<i class="fa fa-archive"></i>
+						<span class="menu-title">
+							<strong>GESTION ESTUDIANTE</strong>
+						</span>
+			
+						<i class="arrow"></i>
+					</a>
+					<!--Submenu-->
+					<ul class="collapse in" aria-expanded="true" style="">
+				
+				<li>
+					<a href="https://artemisa.unbosque.edu.co/sala/index.php?option=estudiantes" id="menuId_633" class="menuItem" rel="">
+						<span class="menu-title">
+							<strong>Acceso A Mi Cuenta</strong>
+						</span>
+			
+					</a>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+				<li>
+					<a href="https://artemisa.unbosque.edu.co/serviciosacademicos/mgi/autoevaluacion/interfaz/CertificadoEstudiante.php" id="menuId_638" class="menuItem" rel="iframe">
+						<span class="menu-title">
+							<strong>Certificado Participacion Encuestas</strong>
+						</span>
+			
+					</a>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+				<li>
+					<a href="https://artemisa.unbosque.edu.co/serviciosacademicos/consulta/consultanotassala.php" id="menuId_166" class="menuItem" rel="iframe">
+						<span class="menu-title">
+							<strong>Consulta De Notas</strong>
+						</span>
+			
+					</a>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+				<li>
+					<a href="https://artemisa.unbosque.edu.co/serviciosacademicos/consulta/estadocredito/estado_cuenta.php" id="menuId_167" class="menuItem" rel="iframe">
+						<span class="menu-title">
+							<strong>Extracto De Credito</strong>
+						</span>
+			
+					</a>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+				<li>
+					<a href="https://artemisa.unbosque.edu.co/serviciosacademicos/consulta/ordenpagovarias/ordenpagovarias.php" id="menuId_170" class="menuItem" rel="iframe">
+						<span class="menu-title">
+							<strong>Pagos</strong>
+						</span>
+			
+					</a>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+				<li>
+					<a href="#" id="menuId_165" class="menuItem" rel="">
+						<span class="menu-title">
+							<strong>Prematricula</strong>
+						</span>
+			
+						<i class="arrow"></i>
+					</a>
+					<!--Submenu-->
+					<ul class="collapse" aria-expanded="true" style="">
+				
+				<li>
+					<a href="https://artemisa.unbosque.edu.co/serviciosacademicos/consulta/prematricula/loginpru.php" id="menuId_168" class="menuItem" rel="iframe">
+						<span class="menu-title">
+							<strong>Hacer Prematricula</strong>
+						</span>
+			
+					</a>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+					</ul>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+					</ul>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+				<li>
+					<a href="https://artemisa.unbosque.edu.co//serviciosacademicos/mgi/tablero_siq/Creacion_Docuemto/Hoja_Vida.html.php?actionID=Dirrecto" id="menuId_271" class="menuItem" rel="iframe">
+						<i class="fa fa-archive"></i>
+						<span class="menu-title">
+							<strong>HOJA DE VIDA</strong>
+						</span>
+			
+					</a>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+				<li>
+					<a href="https://artemisa.unbosque.edu.co/serviciosacademicos/consulta/manualprematricula/index.htm" id="menuId_169" class="menuItem" rel="iframe">
+						<i class="fa fa-archive"></i>
+						<span class="menu-title">
+							<strong>MANUAL AYUDA ESTUDIANTE</strong>
+						</span>
+			
+					</a>
+				
+		
+				</li>
+			
+			<li class="list-divider"></li>
+				
+                <li class="list-divider"></li>
+            </ul>
+            <!--Widget-->
+            <!--================================-->
+            <div class="mainnav-widget">
+                <!-- Show the button on collapsed navigation -->
+                <div class="show-small">
+                    <a href="#" data-toggle="menu-widget" data-target="#demo-wg-server">
+                        <i class="fa fa-desktop"></i>
+                    </a>
+                </div>
+
+                <!-- Hide the content on collapsed navigation -->
+                <div id="demo-wg-server" class="hide-small mainnav-widget-content">
+                    <ul class="list-group">
+                        <li class="mar-btm bs-dashDoard-btn">
+                            <a href="http://www.uelbosque.edu.co/" target="_blank" class="btn btn-success btn-labeled fa fa-desktop">Ir al portal institucional</a>
+                            <a href="http://www.uelbosque.edu.co/nuestro-bosque/infraestructura" target="_blank" class="btn btn-success btn-labeled fa fa-map">Ver mapa institucional</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--================================-->
+            <!--End widget-->
+        </div>
+        <div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div>
+
+    </div>
+</div>
+<!--================================-->
+                    
+                    
+                                        <!--End menu-->
+                
+                </div>
+            </nav>
+            <!--===================================================-->
+            <!--END MAIN NAVIGATION-->
+			
+            <!--ASIDE-->
+            <!--===================================================-->
+            <!--ASIDE-->
+            <!--===================================================-->
+            <aside id="aside-container">
+                <div id="aside">
+    <div class="nano has-scrollbar">
+        <div class="nano-content" tabindex="0" style="right: -15px;">
+
+            <!-- Simple profile -->
+            <div class="text-center pad-all">
+                <div class="pad-ver">
+                        <img src="https://artemisa.unbosque.edu.co/imagenes/estudiantes/1034779503.jpg" class="img-lg img-border img-circle img-rectangulo" alt="Profile Picture">
+                </div>
+                <h4 class="text-lg text-overflow mar-no">Santiago Correa Salgado</h4>
+                                <p class="text-sm">
+                <i class="fa fa-child lang-flag" aria-hidden="true"></i>
+                <span class="lang-name">Estudiante</span>
+                </p>
+
+                <div class="pad-ver btn-group">
+                    <a title="" href="https://mail.google.com/a/unbosque.edu.co" target="_blank" class="btn btn-icon btn-hover-mint fa fa-envelope icon-lg add-tooltip" data-original-title="Email" data-container="body"></a>
+                    <a title="" href="https://ubosquemoodle.unbosque.edu.co/" target="_blank" class="btn btn-icon btn-hover-success fa fa-graduation-cap icon-lg add-tooltip" data-original-title="Campus virtual" data-container="body"></a>
+                    <a title="" href="http://biblioteca.unbosque.edu.co/" target="_blank" class="btn btn-icon btn-hover-success fa fa-book icon-lg add-tooltip" data-original-title="Biblioteca" data-container="body"></a>
+                                    </div>
+                
+            </div>
+            <hr>
+            <ul class="list-group bg-trans">
+
+                <!-- Profile Details -->
+                                <li class="list-group-item list-item-sm" id="asideNombreCarrera">
+                    <i class="fa fa-university fa-fw"></i> <span>INGENIERIA DE SISTEMAS</span>
+                </li>
+                                                        <li class="list-group-item list-item-sm" id="">
+                            <i class="fa fa-at fa-fw"></i> <span>santiagoint15@gmail.com - </span>
+                        </li>
+                                                <li class="list-group-item list-item-sm" id="">
+                            <i class="fa fa-mobile fa-fw"></i> <span>+573143818087</span>
+                        </li>
+                                                <li class="list-group-item list-item-sm" id="">
+                            <i class="fa fa-phone fa-fw"></i> <span>+577478965</span>
+                        </li>
+                                                <li class="list-group-item list-item-sm" id="">
+                            <i class="fa fa-address-book fa-fw"></i> <span>Calle 5C # 56 - 17, Casa esquinera, puerta cerca al deposito con mural</span>
+                        </li>
+                                    </ul>
+            <hr>
+                    </div>
+    <div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div></div>
+</div>
+            </aside>
+            <!--===================================================-->
+            <!--END ASIDE-->
+            <!--===================================================-->
+            <!--END ASIDE-->
+        </div>
+        
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="hide-fixed pull-right pad-rgt"><i class="fa fa-html5"></i> <i class="fa fa-linux fa-php"></i> SALA V1.0</div>
+            <p class="pad-lft">© 2026 Universidad El Bosque</p>
+        </footer>
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL TOP BUTTON -->
+        <!--===================================================-->
+        <button id="scroll-top" class="btn in"><i class="fa fa-chevron-up"></i></button>
+        <!--===================================================-->
+
+
+
+        <div id="floating-top-right" class="floating-container"></div>
+    
+    </div><div id="flot-tooltip" style="position: absolute; display: none; padding: 10px; color: rgb(255, 255, 255); text-align: right; background-color: rgb(28, 30, 33);"></div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER --> 
+    
+    <!--JAVASCRIPT--> 
+<!--Bootstrap [ REQUIRED ]-->
+
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/bootstrap.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/general.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/btheme.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/jqueryAutocomplete/jquery.autocomplete.js?v=1779829266"></script>
+                        <script type="text/javascript" src="https://artemisa.unbosque.edu.co/sala/assets/js/menuTrigger.js?v=1779829266"></script>
+
+
+<div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div></body></html>

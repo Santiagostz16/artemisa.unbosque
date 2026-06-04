@@ -18003,6 +18003,38 @@ be a descendant of the grid when it is being dragged.
     color: #7CC240; font-size: 14px;
 }
 
+
+/* ── Ajustes visuales de notas ── */
+#tabla-notas-container table.notas-tabla {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    color: #333;
+    background: #fff;
+}
+#tabla-notas-container table.notas-tabla th,
+#tabla-notas-container table.notas-tabla td {
+    border: 1px solid #e0e0e0;
+    padding: 4px 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+#tabla-notas-container table.notas-tabla th {
+    background: #f3f4f6;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+}
+#tabla-notas-container table.notas-tabla td:first-child,
+#tabla-notas-container table.notas-tabla td:nth-child(2) {
+    text-align: left;
+}
+#tabla-notas-container table.notas-tabla tfoot td {
+    background: #fafafa;
+    font-size: 11px;
+}
 </style>
 </head>
 <body class="btheme-ready">
@@ -29253,7 +29285,12 @@ function pulsarMenuUsuario(){
         disablePulsar = false;
     }
     if(!disablePulsar){
-        $('#dropdown-user img').effect("pulsate", {times:4}, 1500);
+        var $img = $('#dropdown-user img');
+        if (typeof $img.effect === 'function') {
+            $img.effect("pulsate", {times:4}, 1500);
+        } else {
+            $img.stop(true,true).fadeTo(120,0.55).fadeTo(180,1).fadeTo(120,0.55).fadeTo(180,1);
+        }
     }
 }
 
@@ -33077,16 +33114,20 @@ function initialize(){
     /*$("#txt_buscador").keyup(function() {
         ajax_showOptions(this,'leeMenus',$(this).val()); 
     });/**/
-    $("#txt_buscador").devbridgeAutocomplete({
-        serviceUrl: HTTP_SITE+'/index.php?tmpl=json&option=mainMenu&task=buscarMenu',
-        minChars : 5,
-        /*type : 'POST',*/
-        deferRequestBy : 500,
-        onSelect: function (suggestion) {
-            //alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-            triggerMenu(suggestion.data);
-        }
-    });
+    var $search = $("#txt_buscador");
+    if (typeof $search.devbridgeAutocomplete === 'function') {
+        $search.devbridgeAutocomplete({
+            serviceUrl: HTTP_SITE+'/index.php?tmpl=json&option=mainMenu&task=buscarMenu',
+            minChars : 5,
+            /*type : 'POST',*/
+            deferRequestBy : 500,
+            onSelect: function (suggestion) {
+                triggerMenu(suggestion.data);
+            }
+        });
+    } else {
+        $search.attr('placeholder', 'Búsqueda (menú disponible)');
+    }
 }
 function initializeBreacCrumb(){
     $('#page-breadCrumb .menuItem').click(function(e){
@@ -43161,7 +43202,7 @@ function fp(v){ return (v===null||v===undefined)?'\u00a0':v+'%'; }
 function buildNotasTable(pid) {
     var rows = NOTAS[pid];
     if (!rows) return '<p style="margin:8px 0;">No hay calificaciones registradas para este periodo.</p>';
-    var h = '<table width="750" border="1" cellpadding="1" cellspacing="0" bordercolor="#E9E9E9" style="font-size:13px;">';
+    var h = '<table class="notas-tabla" cellpadding="1" cellspacing="0">';
     h += '<thead><tr id="trtitulogris">';
     ['Código','Nombre Asignatura','Cr','C1','%','C2','%','C3','%','PPA','NPA','F%','R','FT','FP']
     .forEach(function(c,i){
@@ -43182,7 +43223,7 @@ function buildNotasTable(pid) {
         h += '</tr>';
         if(n.ppa>0){sp+=n.ppa*n.cr; sw+=n.cr;}
     });
-    var pps = sw>0?(sp/sw).toFixed(0):'0';
+    var pps = sw>0?(sp/sw).toFixed(1):'0.0';
     h += '</tbody><tfoot><tr><td colspan="3"><strong>Promedio Ponderado Semestral:&nbsp;'+pps+'</strong></td>';
     h += '<td colspan="12"><strong>Promedio Ponderado Acumulado:&nbsp;</strong></td></tr></tfoot></table>';
     return h;
@@ -43277,14 +43318,14 @@ function bindLocal(){
 // ── Flot chart (exact match to historicoDeNotas.js) ───
 function initFlot(){
     if(typeof $.plot==='undefined') return;
-    var c = $('#historicoDeNotas');
+    var c = $('#page-content #historicoDeNotas').first();
     if(!c.length) return;
     if(c.width()===0){ setTimeout(initFlot, 200); return; }
     c.empty();
     var periodos   = [20241, 20242, 20251, 20252];
     var notas      = [[0,null],[1,3.5],[2,3.0],[3,3.1],[4,3.3],[5,null]];
     var ticksXaxis = 4;
-    var plot = $.plot('#historicoDeNotas', [{
+    var plot = $.plot(c.get(0), [{
         label: 'Nota semestre',
         data:  notas,
         lines: { show:true, lineWidth:2, fill:true,
@@ -43302,7 +43343,7 @@ function initFlot(){
         position:'absolute', display:'none', padding:'10px',
         color:'#fff', 'text-align':'right', 'background-color':'#1c1e21'
     }).appendTo('body');
-    $('#historicoDeNotas').bind('plothover', function(event,pos,item){
+    c.bind('plothover', function(event,pos,item){
         if(item){
             var x=item.datapoint[0], y=item.datapoint[1];
             $('#flot-tooltip').html("<p class='h4'>Semestre "+x+": <br>"+y+"</p>Periodo: "+periodos[x-1])
@@ -43314,7 +43355,7 @@ function initFlot(){
 // ── FullCalendar (exact match to moduloCalendarioInstitucional.js) ────────
 function initCal(){
     if(typeof $.fn.fullCalendar==='undefined') return;
-    var cal = $('#calendar');
+    var cal = $('#page-content #calendar').first();
     if(!cal.length) return;
     try{ cal.fullCalendar('destroy'); }catch(e){}
     var f   = fechaHoy();

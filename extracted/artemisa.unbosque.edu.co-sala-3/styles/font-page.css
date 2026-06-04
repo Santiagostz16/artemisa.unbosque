@@ -1,0 +1,96 @@
+/*!
+ *  Font page by @quinteroivan
+ */
+/* FONT PATH
+ * -------------------------- 
+/**/
+@font-face {
+	font-family: 'Acherus Grotesque'; 
+	src: url('../images/AcherusGrotesque-Light.otf') format("opentype"); 
+}
+@font-face {
+	font-family: 'Acherus Grotesque';
+	src: url('../images/AcherusGrotesque-Black.otf') format("opentype");  
+    font-weight: bold;  
+}
+@font-face {
+	font-family: 'Acherus Grotesque'; 
+	src: url('../images/AcherusGrotesque-Black-Italic.otf') format("opentype"); 
+    font-style: italic, oblique;
+}
+@font-face {
+	font-family: 'Acherus Grotesque'; 
+	src: url('../images/AcherusGrotesque-Bold.otf') format("opentype"); 
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+@font-face {
+	font-family: 'Acherus Grotesque'; 
+	src: url('../images/AcherusGrotesque-Bold.otf') format("opentype"); 
+    font-weight: bold;
+}
+@font-face {
+	font-family: 'Acherus Grotesque'; 
+	src: url('../images/AcherusGrotesque-Extrabold.otf') format("opentype"); 
+    font-weight: bolder;
+}
+@font-face {
+	font-family: 'Acherus Grotesque'; 
+	src: url('../images/AcherusGrotesque-Light.otf') format("opentype");  
+    font-weight: normal; 
+}
+/*{     
+	src: url('../images/AcherusGrotesque-Medium.otf') format("opentype");  
+	src: url('../images/AcherusGrotesque-Medium-Italic.otf') format("opentype");   
+	src: url('../images/AcherusGrotesque-Regular.otf') format("opentype");   
+	src: url('../images/AcherusGrotesque-Regular-Italic.otf') format("opentype");   
+	src: url('../images/AcherusGrotesque-Thin.otf') format("opentype");   
+	src: url('../images/AcherusGrotesque-Thin-Italic.otf') format("opentype");   
+	src: url('../images/AcherusGrotesque-Ultralight.otf') format("opentype");   
+	src: url('../images/AcherusGrotesque-Ultralight-Italic.otf') format("opentype");   
+}/**/
+
+@font-face {
+	font-family: Lato;
+	src: url('../images/Lato-Black.ttf'); 
+	src: url('../images/Lato-BlackItalic.ttf');  
+	src: url('../images/Lato-Bold.ttf');  
+	src: url('../images/Lato-BoldItalic.ttf');  
+	src: url('../images/Lato-Hairline.ttf');  
+	src: url('../images/Lato-HairlineItalic.ttf');  
+	src: url('../images/Lato-Italic.ttf');  
+	src: url('../images/Lato-Light.ttf');  
+	src: url('../images/Lato-LightItalic.ttf'); 
+	src: url('../images/Lato-Regular.ttf');
+}
+
+@font-face {
+	font-family: PTSerif;
+	src: url('../images/PTSerif700.ttf'); 	
+	src: url('../images/PTSerif700italic.ttf');   
+	src: url('../images/PTSerifCaptionitalic.ttf');   
+	src: url('../images/PTSerifCaptionregular.ttf');   
+	src: url('../images/PTSerifitalic.ttf');   
+	src: url('../images/PTSerifregular.ttf');   
+} 
+/*
+h3{
+	font-family: Acherus_Grotesque;
+	font-size: 28 - Line height: 31 - Tracking: -0.5;
+}
+h4{
+	font-family: Acherus_Grotesque;
+	font-size: 22 - Line height: 25 - Tracking: -0.5;
+}
+
+cita{
+	font-family: Acherus_Grotesque;
+	font-size: 28 - Line height: 30 - Tracking: -0.5;
+}
+
+p{
+	font-family: Lato;
+	font-size: 16 - Line height: 22 - Tracking: 0;
+}
+
+/**/
